@@ -1,0 +1,149 @@
+
+@font-face {
+    font-family: 'Bahnschrift';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bahnschrift Regular'), url('BAHNSCHRIFT 1.woff') format('woff');
+    }
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    max-width: 100vw;
+}
+
+.cursors{
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    pointer-events: none;
+    transform-origin: 100% 100%;
+    backdrop-filter: grayscale();
+    transition: all 0.4s ease;
+    transition-property: background,transform;
+   }
+
+.link-grows{
+    transform: scale(1.5);
+    border: 3px solid rgb(248, 141, 0);
+    background: rgb(248, 141, 0);
+   
+}
+
+.glass{
+    margin-left: 40%;
+    height: 70vh;
+}
+
+.img-link-grows{
+    transform: scale(3);
+}
+
+.back-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+object-fit: cover;
+min-width: 100vw;
+}
+
+.nav-button{
+    position: fixed;
+    z-index: 2;
+    top: 40%;
+    left: 25%;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-size: 6vw;
+    
+}
+
+.filter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+    mix-blend-mode: overlay;
+    filter:invert(0.8);
+
+}
+
+.model{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 13%;
+    color: white;
+    /* transform: translate(-50%, -50%); */
+    opacity: 0;
+    z-index: 3;
+    height: 80vh;
+}
+
+@media(max-width:1531px){
+    .main{
+        margin-left: 10vw;
+    }
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Raleway';
+    cursor: none;
+
+}
+
+.cursor{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    border: 3px solid white;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: 4;
+    transform-origin: 100% 100%;
+    transition: all 0.3s;
+    transition-property: transform,background,border;
+    backdrop-filter: grayscale();
+}
+
+.link-grow{
+    transform: scale(1.5);
+    background-color: orange;
+    border: orange;
+}
+
+.model-link-grow{
+    transform: scale(3);
+}
+
+
+
+
+
+
+
+
+
